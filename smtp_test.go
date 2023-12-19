@@ -23,7 +23,7 @@ var (
 	testAuth    = smtp.PlainAuth("", testUser, testPwd, testHost)
 )
 
-func TestDialer(t *testing.T) {
+func TestDialer(t  testing.T) {
 	d := NewDialer(testHost, testPort, "user", "pwd")
 	testSendMail(t, d, []string{
 		"Extension STARTTLS",
@@ -290,3 +290,4 @@ func assertConfig(t *testing.T, got, want *tls.Config) {
 		t.Errorf("Invalid field InsecureSkipVerify in config, got %v, want %v", got.InsecureSkipVerify, want.InsecureSkipVerify)
 	}
 }
+ 
